@@ -1715,5 +1715,5 @@ ul.working-hour li > span {    position: absolute;    top: 0;    right: 0;    fo
     bottom: 23px;
     right:0px;
     left:70%;
-    width: 280px;
+    width: 100%;
   }
