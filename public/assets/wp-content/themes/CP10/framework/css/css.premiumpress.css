@@ -1713,6 +1713,7 @@ ul.working-hour li > span {    position: absolute;    top: 0;    right: 0;    fo
     z-index: 999;
     position: fixed;
     bottom: 23px;
-    right:-100px;
+    right:0px;
+    left:70%;
     width: 280px;
   }
