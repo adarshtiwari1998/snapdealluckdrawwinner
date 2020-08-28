@@ -7,14 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>user details <%=data[0]['info']['Name']%></title>
 <script src="https://cp10.premiummod.com/wp-includes/js/jquery/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <noscript id="deferred-styles">
   <%- include ("../css-and-js-include/css-include") %>
 </noscript>
+<script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <style>.preload-hide { display:none; }</style></head>
 <body class="blog demomode theme-cp home elementor-default">
 
-
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4>Congratulation <span style="color:green"><%=data[0]['info']['Name']%></span> you won a prize </h4>
+<p class="text-dark">Contact us to get more benefits and Prizes.</p>
+<span>Registration charge will be <strong>4500</strong></span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="wrapper"style="display:none;">
   <%- include ("../header-include/header-sidebar") %>
@@ -26,7 +43,8 @@
     <div class="container">
         <div class="row shadow p-3 mb-5 bg-white rounded mt-4 para-desc mx-auto d-block">
             <div class="col-md-8 col-lg-8  mx-auto text-center">
-              <h2>Congratulations <span style="color:blue"><%=data[0]['info']['Name']%></span>,<br> Your winner id <span style="color:red">(<%=data[0]['info']['W Code']%></span><span style="color:red"><%=data[0]['info']['number']%> )</span> </h2>
+              <h2>Congratulations <span style="color:blue"><%=data[0]['info']['Name']%></span>,<br> Your winner id <span style="color:red">(<%=data[0]['info']['W Code']%></span><span style="color:red">SN2020<%=data[0]['info']['number']%>)</span> </h2>
+              <!-- <h2>Congratulations <span style="color:blue"><%=data[0]['info']['Name']%></span>,<br> Your winner id <span style="color:red">(<%=data[0]['info']['W Code']%></span><span style="color:red"><%=data[0]['info']['number']%> )</span> </h2> -->
         <h1 class="user-details-breadcomb"> YOUR PRIZE DETAILS  </h1>
        <div class="row y-middle"> 
         <div class="col-lg-4 pl-lg-3">
@@ -47,7 +65,8 @@
              <!-- <h2 class="mb-4 font- text-dark font-weight-bold wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;"><%=data[0]['info']['Prize Ranking']%> Prize -->
                  <i class="fal fa-hand-pointer ml-2 text-primary wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s;">&nbsp;</i>
                        <span>You won</span> Swift dezire </h2>
-                       <span class="font-weight-bold text-primary">You buy<p><%=data[0]['info']['Prize name']%></p> </span>
+                       <h4 class="text-align:center"> You buy</h4>
+                       <span class="font-weight-bold text-primary"><%=data[0]['info']['Prize name']%> </span>
                     <p class="lead text-dark font- text-500 mb-4 font-weight-bold wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s;">Company Name:  <span class="font-weight-normal text-primary">Snapdeal</span></p> 
                     <span class="font-weight-bold text-primary">Registration fees: <strong>4500 </strong></span>
                <!-- <p class="lead text-dark font- text-500 mb-4 font-weight-bold wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s;">Company Name:  <span class="font-weight-normal text-primary"> <%=data[0]['info']['Prize Sponser name']%> </span></p>  -->
@@ -131,6 +150,7 @@
  </main>
  </div>
  <%- include ("../css-and-js-include/script-include") %>
+
   </body>
 
 </html>
