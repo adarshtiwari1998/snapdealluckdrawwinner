@@ -73,38 +73,39 @@
  
 // other page routing
 app.get('/product', function(req, res) {
-    res.render('pages/product.ejs');
+    res.render('pages/product');
 });
 app.get('/prize', function(req, res) {
-    res.render('pages/prize.ejs');
+    res.render('pages/prize');
 });
 app.get('/how-to-win', function(req, res) {
-    res.render('pages/how-to-win.ejs');
+    res.render('pages/how-to-win');
 });
 app.get('/winner-list', function(req, res) {
-    res.render('pages/winner-list.ejs');
+    res.render('pages/winner-list');
 });
 app.get('/check-status', function(req, res) {
-    res.render('pages/check-status.ejs');
+    res.render('pages/check-status');
 });
 app.get('/terms-and-conditions', function(req, res) {
-    res.render('pages/terms-and-conditions.ejs');
+    res.render('pages/terms-and-conditions');
 });
 app.get('/signin', function(req, res) {
-    res.render('pages/signin.ejs');
+    res.render('pages/signin');
 });
 app.get('/contact', function(req, res) {
-    res.render('pages/contact.ejs');
+    res.render('pages/contact');
 });
 
+
 app.get('/winner-cash', function(req, res) {
-    res.render('pages/winner-cash.ejs');
+    res.render('pages/winner-cash');
 });
 app.get('/final-prize', function(req, res) {
-    res.render('pages/final-prize.ejs');
+    res.render('pages/final-prize');
 });
 app.get('/scratch', function(req, res) {
-    res.render('pages/scratch.ejs');
+    res.render('pages/scratch');
 });
 // other page routing
 
